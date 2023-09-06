@@ -30,8 +30,8 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request)
     {
-        $task = $request->user()-tasks()-> create ($request->validated());
-        
+        $task = $request->user()->tasks()->create($request->validated());
+
         return TaskResource::make($task);
     }
 
